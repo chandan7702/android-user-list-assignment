@@ -1,9 +1,18 @@
 <resources >
     <!-- Base application theme. -->
     <style name="Base.Theme.UserApp" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+
+        <!-- Primary brand color -->
+        <item name="colorPrimary">@color/color_primary</item>
+        <item name="colorPrimaryVariant">@color/color_primary_dark</item>
+        <item name="colorOnPrimary">@color/color_on_primary</item>
+
+        <!-- If you want toolbar, buttons etc to use it -->
+        <item name="colorAccent">@color/color_primary</item>
+
+        <item name="android:fontFamily">@font/gibsons</item>
+        <item name="fontFamily">@font/gibsons</item>
+
     </style>
 
-    <style name="Theme.UserApp" parent="Base.Theme.UserApp" />
 </resources>

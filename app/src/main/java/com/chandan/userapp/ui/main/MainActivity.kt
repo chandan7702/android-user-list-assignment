@@ -11,6 +11,9 @@ import com.chandan.userapp.R
 import com.chandan.userapp.model.User
 import com.chandan.userapp.ui.detail.UserDetailActivity
 
+
+
+
 class MainActivity : AppCompatActivity() {
 
     private lateinit var recyclerViewUsers: RecyclerView
@@ -50,7 +53,7 @@ class MainActivity : AppCompatActivity() {
             // Apply layout animation
             layoutAnimation = AnimationUtils.loadLayoutAnimation(
                 this@MainActivity,
-                R.anim.layout_animation_fall_down
+                R.anim.layout_animation_pop
             )
             scheduleLayoutAnimation()
         }
@@ -64,6 +67,6 @@ class MainActivity : AppCompatActivity() {
         }
         startActivity(intent)
         // Screen transition animation
-        overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.fade_out)
+        overridePendingTransition(R.anim.activity_slide_in_up, R.anim.activity_fade_out)
     }
 }

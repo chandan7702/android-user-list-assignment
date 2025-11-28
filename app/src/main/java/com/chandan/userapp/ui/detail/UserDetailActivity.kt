@@ -64,6 +64,6 @@ class UserDetailActivity : AppCompatActivity() {
     override fun finish() {
         super.finish()
         // Custom back transition
-        overridePendingTransition(android.R.anim.fade_in, android.R.anim.slide_out_right)
+        overridePendingTransition(R.anim.activity_fade_in, R.anim.activity_slide_out_down)
     }
 }

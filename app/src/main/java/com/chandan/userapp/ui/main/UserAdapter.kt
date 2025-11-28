@@ -24,7 +24,25 @@ class UserAdapter(
             textViewEmail.text = user.email
             textViewAvatar.text = user.name.firstOrNull()?.uppercaseChar()?.toString() ?: "?"
 
-            container.setOnClickListener { onItemClick(user) }
+            container.setOnClickListener {
+                // Small press-down then release bounce
+                container.animate()
+                    .scaleX(0.96f)
+                    .scaleY(0.96f)
+                    .setDuration(80)
+                    .withEndAction {
+                        container.animate()
+                            .scaleX(1f)
+                            .scaleY(1f)
+                            .setDuration(120)
+                            .withEndAction {
+                                // Trigger actual click after animation
+                                onItemClick(user)
+                            }
+                            .start()
+                    }
+                    .start()
+            }
         }
     }
 
